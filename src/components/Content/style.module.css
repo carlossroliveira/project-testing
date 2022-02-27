@@ -1,0 +1,33 @@
+.container {
+  grid-area: content;
+  background-color: white;
+}
+
+.content {
+  margin: 0 auto;
+  width: calc(100vw - 20px);
+  max-width: 1248px;
+  padding: 0px 40px;
+}
+
+.content__div {
+  text-align: center;
+}
+
+.title {
+  color: black;
+  font-weight: 900;
+  line-height: 27px;
+}
+.title::after {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 5px;
+  margin-top: 6px;
+  background-color: #c0c0c0;
+}
+
+.content__div > button:before {
+  color: black !important;
+}

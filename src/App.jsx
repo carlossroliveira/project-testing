@@ -1,11 +1,10 @@
 import React from "react";
-import "./App.css";
-import { Header } from "./Header";
-import { Carousel } from "./Carousel";
-import { Content } from "./Content";
-import { Form } from "./Form";
-import { Footer } from "./Footer";
-
+import "./styles/App.css";
+import { Header } from "./components/Header";
+import { Carousel } from "./components/Carousel";
+import { Content } from "./components/Content";
+import { Form } from "./components/Form";
+import { Footer } from "./components/Footer";
 
 export default function App() {
   return (

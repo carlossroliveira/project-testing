@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../img/logo.png";
+import Logo from "../assets/img/logo.png";
 import styles from "./style.module.css";
 
 import { GrFormSearch } from "react-icons/gr";

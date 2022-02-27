@@ -1,7 +1,7 @@
 import React from "react";
-import footerParteThree from "../img/footerParteThree.png";
-import footerPartOne from "../img/footerPartOne.png";
-import footerPartTwo from "../img/footerPartTwo.png";
+import footerParteThree from "../assets/img/footerParteThree.png";
+import footerPartOne from "../assets/img/footerPartOne.png";
+import footerPartTwo from "../assets/img/footerPartTwo.png";
 import styles from "./style.module.css";
 
 import { MdEmail } from "react-icons/md";
