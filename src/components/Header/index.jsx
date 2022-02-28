@@ -6,7 +6,7 @@ import { GrFormSearch } from "react-icons/gr";
 import { AiOutlineUser } from "react-icons/ai";
 import { GiShoppingCart } from "react-icons/gi";
 
-export const Header = () => {
+export const Header = (props) => {
   const [noEffect, setNoEffect] = useState(false);
   const handleClick = () => setNoEffect((first) => !first);
 
@@ -43,7 +43,7 @@ export const Header = () => {
             <span>
               <GiShoppingCart />
             </span>
-            <span>1</span>
+            <span>{props.handleWithValueLocalStorage()}</span>
           </div>
         </div>
       </nav>

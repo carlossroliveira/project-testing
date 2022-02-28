@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import styles from "./style.module.css";
 
-export const Content = () => {
+export const Content = (props) => {
   const [listOfArrayProducts, setListOfArrayProducts] = useState([]);
 
   useEffect(() => {
@@ -48,19 +48,48 @@ export const Content = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>Mais Vendidos</h1>
         <Slider className={styles.content__div} {...settings}>
-          {listOfArrayProducts?.map((item) => {
-            return (
-              <div key={item.productId}>
-                <img src={item.imageUrl} alt="Imagem" />
-                <div>
-                  <h4>{item.productName}</h4>
-                  <span>{item.stars}</span>
-                  <p>R$: {item.price}</p>
-                  <button>Comprar</button>
-                </div>
+          {listOfArrayProducts?.map((item) => (
+            <div key={item.productId}>
+              <img
+                className={styles.content__img}
+                src={item.imageUrl}
+                alt="Imagem"
+              />
+              <div className={styles.content__div__info}>
+                <h4 className={styles.content__div__title}>
+                  {item.productName}
+                </h4>
+                <span>{item.stars}</span>
+
+                {item.listPrice ? (
+                  <p className={styles.content__listPrice}>
+                    de R$ {item.listPrice}
+                  </p>
+                ) : (
+                  <p className={styles.content__empty}></p>
+                )}
+                <p className={styles.content__price}>por R$ {item.price}</p>
+
+                {item.installments.map(
+                  (subItem) =>
+                    subItem && (
+                      <p
+                        className={styles.content__alternative__price}
+                        key={subItem.quantity}
+                      >
+                        ou em ${subItem.quantity}x de R$ ${subItem.value}`
+                      </p>
+                    )
+                )}
+                <button
+                  onClick={props.handleWithState}
+                  className={styles.content__button}
+                >
+                  Comprar
+                </button>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </Slider>
       </div>
     </section>
