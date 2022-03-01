@@ -38,15 +38,6 @@ $ npm start
 ![Css3](https://img.shields.io/badge/-Css3%20-pink?style=flat-square&logo=Css3)
 
 
-
-
-## 🖤 Author
-
-**Tamires Escobar**
-
-- Github: [@TamiresEscobar]()
-- LinkedIn: [@TamiresEscobar](https://www.linkedin.com/in/tamires-escobar-b5778399/)
-
 ---
 
 ## 📝 License
